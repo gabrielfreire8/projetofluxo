@@ -24,7 +24,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: SingleChildScrollView( // Adicionado SingleChildScrollView
+        child: SingleChildScrollView( 
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,7 +36,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 24),
 
-              // Campo Nome
+              
               TextFormField(
                 controller: _nomeController,
                 decoration: InputDecoration(
@@ -49,7 +49,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 16),
 
-              // Campo E-mail
+              
               TextFormField(
                 controller: _emailController,
                 decoration: InputDecoration(
@@ -63,7 +63,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 16),
 
-              // Campo CPF
+             
               TextFormField(
                 decoration: InputDecoration(
                   labelText: "CPF",
@@ -76,7 +76,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 16),
 
-              // Campo Senha
+            
               TextFormField(
                 controller: _senhaController,
                 decoration: InputDecoration(
@@ -100,7 +100,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 16),
 
-              // Campo Confirmar Senha
+             
               TextFormField(
                 controller: _confirmarSenhaController,
                 decoration: InputDecoration(
@@ -124,10 +124,10 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 24),
 
-              // Botão Cadastrar
+             
               ElevatedButton(
                 onPressed: () {
-                  // Validação dos campos
+                  
                   if (_nomeController.text.isEmpty ||
                       _emailController.text.isEmpty ||
                       _senhaController.text.isEmpty ||
@@ -141,7 +141,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
                       SnackBar(content: Text("As senhas não coincidem!")),
                     );
                   } else {
-                    // Navegar para a tela Home
+                   
                     Navigator.pushReplacementNamed(context, '/home');
                   }
                 },
@@ -156,10 +156,10 @@ class _CadastroScreenState extends State<CadastroScreen> {
               ),
               SizedBox(height: 16),
 
-              // Botão Cancelar
+             
               TextButton(
                 onPressed: () {
-                  // Voltar para a tela de Login
+                  
                   Navigator.pop(context);
                 },
                 child: Text("Cancelar"),
